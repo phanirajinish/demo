@@ -1,40 +1,26 @@
 # Core Packages
+# Core Packages
 import streamlit as st
 import cv2
 import numpy as np
 import os
-import os
 import time
-import datetime
-import json
-import random
-import copy
-import logging
 import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 from glob import glob
-import detectron2
 from detectron2.engine import DefaultPredictor, DefaultTrainer
-from detectron2.data import DatasetCatalog, MetadataCatalog, build_detection_test_loader
-from detectron2.data import DatasetMapper, build_detection_train_loader
-from detectron2.engine.hooks import HookBase
-from detectron2.structures import BoxMode
+from detectron2.data import DatasetCatalog, MetadataCatalog
 import detectron2.data.transforms as T
 from detectron2.data import detection_utils as utils
 from detectron2.utils.logger import log_every_n_seconds
 from detectron2 import model_zoo
-from detectron2.config import get_cfg,CfgNode
+from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
 from detectron2.utils.visualizer import ColorMode
 from detectron2.utils.logger import setup_logger
-from detectron2.evaluation import COCOEvaluator, inference_on_dataset,inference_context
-import detectron2.utils.comm as comm
-from detectron2.data.datasets import register_coco_instances
 from PIL import Image
-
-setup_logger()
-import torch, torchvision
+import torch
 print(torch.__version__, torch.cuda.is_available())
 
 classes = ['background',
