@@ -1,5 +1,4 @@
 # Core Packages
-# Core Packages
 import streamlit as st
 import cv2
 import numpy as np
@@ -66,7 +65,7 @@ def get_predictor():
     cfg.SOLVER.MAX_ITER = 2500
     cfg.SOLVER.WEIGHT_DECAY =  0.0001
     cfg.SOLVER.CHECKPOINT_PERIOD = 500
-
+    cfg.MODEL.DEVICE='cpu'
     cfg.MODEL.WEIGHTS =  model_path   
     cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = thresh
 
